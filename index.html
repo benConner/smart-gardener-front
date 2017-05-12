@@ -1,0 +1,25 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+  <link href="bower_components/materialize/bin/materialize.css" rel="stylesheet">
+  <link rel="stylesheet" href="/style/main.css">
+  <title>Smart Gradener</title>
+</head>
+<body>
+  <div ng-app="Smart_Gardener">
+    <div ng-view></div>
+  </div>
+  <script src="bower_components/angular/angular.min.js"></script>
+  <script src="bower_components/angular-route/angular-route.min.js"></script>
+  <script src="app/app.js"></script>
+  <!-- angular factories -->
+  <script src="app/factories/gardenFactory.js"></script>
+  <script src="app/factories/plantFactory.js"></script>
+  <!-- angular controllers -->
+  <script src="app/controllers/gardensCtrl.js"></script>
+  <script src="app/controllers/homeCtrl.js"></script>
+  <script src="app/controllers/plantCtrl.js"></script>
+  <script src="app/controllers/one_gardenCtrl.js"></script>
+</body>
+</html>
