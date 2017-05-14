@@ -1,0 +1,22 @@
+{
+  "name": "smart-gardener-front",
+  "homepage": "https://github.com/benConner/smart-gardener-front",
+  "authors": [
+    "Ben Conner <ben.conner40@gmail.com>"
+  ],
+  "description": "",
+  "main": "",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular-route": "^1.6.4",
+    "angular": "^1.6.4",
+    "materialize": "^0.98.2"
+  }
+}
