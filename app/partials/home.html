@@ -1,16 +1,26 @@
 <div class="page">
-  <div class="container">
-    <div class="home-body">
-      <nav>
+  <div class="home-body">
+    <div class="header">
+      <div class="header_layer">
+        <nav>
           <div class="nav-wrapper">
             <a href="#" class="brand-logo">Smart Gardener</a>
             <ul id="nav-mobile" class="right">
-              <li><a href="/gardens">Gardens</a></li>
+              <li><a  class="gardens_link" href="/gardens">Gardens</a></li>
             </ul>
           </div>
-      </nav>
-      <div class="content">
-        <h1>Hello Welcome to Smart Gardener</h1>
+        </nav>
+          <h2 class="center welcome">Life's a garden</h2>
+          <h2 class="center welcome">So learn to grow one</h2>
+        <div class="center search_div">
+          <input class="search" type="text" placeholder="Choose a plant to grow">
+        </div>
+      </div>
+    </div>
+    <div class="content">
+      <div class="plants" ng-repeat="plant in plants">
+        <img class="plant_img_home" ng-src="{{plant.img}}" alt="photo of {{name}}">
+        <span class="plant_name_home">{{plant.name}}</span>
       </div>
     </div>
   </div>
