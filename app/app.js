@@ -8,10 +8,10 @@ app.config(function($routeProvider, $locationProvider){
       }).when('/gardens', {
         controller: 'GardensCtrl',
         templateUrl: 'app/partials/gardens.html'
-      }).when('/garden', {
+      }).when('/garden/:id', {
         controller: 'One_GardenCtrl',
         templateUrl: './app/partials/one_garden.html'
-      }).when('/plant', {
+      }).when('/plant/:id', {
         controller: 'PlantCtrl',
         templateUrl: './app/partials/plant.html'
       }).otherwise({
