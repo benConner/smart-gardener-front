@@ -1,3 +1,23 @@
-<div ng-repeat="garden in gardens">
-  <h1>{{garden.name}}</h1>
+
+<div class="page">
+  <div class="gardens_body">
+    <div class="gardens_head">
+      <nav>
+        <div class="nav-wrapper">
+          <a href="#" class="brand-logo">Smart Gardener</a>
+          <ul id="nav-mobile" class="right">
+            <li><a class="gardens_link" href="/#/">Home</a></li>
+          </ul>
+        </div>
+      </nav>
+      <div class="center create_garden_btn">
+        <a  class="btn green lighten-1" href="/#/createGarden">Create A Garden</a>
+      </div>
+    </div>
+  </div>
+  <div class="content">
+    <div class="plants" ng-repeat="garden in gardens" ng-click="getGardenId(garden.id)">
+      <h1>{{garden.name}}</h1>
+    </div>
+  </div>
 </div>

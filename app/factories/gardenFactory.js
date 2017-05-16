@@ -13,7 +13,7 @@ angular.module('Smart_Gardener')
     },
     getGardenById : (id) => {
       return $http
-      .get(`http://localhost:3000/api/v1/garden?plantId=${id}`)
+      .get(`http://localhost:3000/api/v1/garden?gardenId=${id}`)
       .then((res) => {
           return res
       })
