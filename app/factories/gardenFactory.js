@@ -34,7 +34,17 @@ angular.module('Smart_Gardener')
     },
     deleteGarden : (id) => {
       return $http
-      .delete(`http://localhost:3000/api/v1/gardens/${id}`)
+      .delete(`http://localhost:3000/api/v1/garden/delete?id=${id}`)
+      .then((res)=>{
+        return res;
+      })
+      .catch((res)=>{
+        console.error(res);
+      })
+    },
+    deletePlantFromGarden : (gardenId, plantId) => {
+      return $http
+      .delete(`http://localhost:3000/api/v1/garden/plants/${gardenId}/${plantId}`)
       .then((res)=>{
         return res;
       })
