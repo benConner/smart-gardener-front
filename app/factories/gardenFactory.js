@@ -22,8 +22,9 @@ angular.module('Smart_Gardener')
       })
     },
     addGarden : (gardenObj) => {
+      console.log(gardenObj);
       return $http
-      .post(`http://localhost:3000/api/v1/gardens/new`, gardenObj)
+      .post(`http://localhost:3000/api/v1/garden/plants`, gardenObj)
       .then((res)=>{
         return res;
       })
