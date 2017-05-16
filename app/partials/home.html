@@ -18,7 +18,7 @@
       </div>
     </div>
     <div class="content">
-      <div class="plants" ng-click="plantById(plant.id)" ng-repeat="plant in plants| filter:search">
+      <div class="plants" ng-click="plantById(plant.id)" ng-repeat="plant in plants| filter:search | orderBy : 'name'">
         <img class="plant_img_home" ng-src="{{plant.img}}" alt="photo of {{name}}">
         <span class="plant_name_home">{{plant.name}}</span>
       </div>
