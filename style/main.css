@@ -67,3 +67,6 @@ nav{
   font-size: 2rem;
   margin-left: 10%;
 }
+.form_text::-webkit-input-placeholder{
+  color:#66bb6a !important;
+}
