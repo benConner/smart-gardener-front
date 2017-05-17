@@ -1,4 +1,3 @@
-
 <div class="page">
   <div class="gardens_body">
     <div class="gardens_head">
@@ -16,8 +15,10 @@
     </div>
   </div>
   <div class="content">
-    <div class="plants" ng-repeat="garden in gardens" ng-click="getGardenId(garden.id)">
-      <h1>{{garden.name}}</h1>
+    <div class="plants" ng-repeat="garden in gardens">
+      <h1 ng-click="getGardenId(garden.id)">{{garden.name}}</h1>
+      <input type="button" ng-click="delete(garden.id)" value="X">
     </div>
+
   </div>
 </div>
