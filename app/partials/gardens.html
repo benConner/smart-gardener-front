@@ -11,14 +11,14 @@
         </div>
       </nav>
       <div class="center create_garden_btn">
-        <a  class="btn green lighten-1" href="/#/createGarden">Create A Garden</a>
+        <a  class="btn green lighten-1 create_btn" href="/#/createGarden">Create A Garden</a>
       </div>
     </div>
   </div>
   <div class="content">
     <div class="plants" ng-repeat="garden in gardens">
-      <h1 ng-click="getGardenId(garden.id)">{{garden.name}}</h1>
-      <input type="button" ng-click="delete(garden.id)" value="X">
+      <span ng-click="getGardenId(garden.id)">{{garden.name}}</span>
+      <input class="delete" type="button" ng-click="delete(garden.id)" value="X">
     </div>
 
   </div>
