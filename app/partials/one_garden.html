@@ -15,27 +15,13 @@
     </div>
   </nav>
   <div class="content">
-    <h1>{{garden.name}}</h1>
+    <h1 class="center">{{garden.name}}</h1>
     <div ng-repeat="plant in garden.plant">
-      {{plant.name}}
+      <h3 class="">{{plant.name}}</h3>
+      <input class="delete" type="button" ng-click="deletePlant(plant.id)"value="X">
     </div>
-    <div class="SHOW UP DAMN YOU">
-      <select ng-option="color.name for plant in plants">
-        <option></option>
-      </select>
-      <select>
-        <option value="volvo">Volvo</option>
-        <option value="saab">Saab</option>
-        <option value="mercedes">Mercedes</option>
-        <option value="audi">Audi</option>
-      </select>
-      SHOW UP DAMN YOU
+    <div class="plant_select">
+      <select  ng-change="addPlant(selectedPlant.id)" class="" ng-model="selectedPlant" ng-options="plant.name for plant in plants | orderBy:'name'"></select>
     </div>
   </div>
 </div>
-<select>
-  <option value="volvo">Volvo</option>
-  <option value="saab">Saab</option>
-  <option value="mercedes">Mercedes</option>
-  <option value="audi">Audi</option>
-</select>
