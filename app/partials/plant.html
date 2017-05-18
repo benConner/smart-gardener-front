@@ -9,7 +9,29 @@
       </ul>
     </div>
   </nav>
-  <div class="">{{plant.name}}</div>
-  <img ng-src="{{plant.img}}" alt="{{plant.name}}">
-  <div class="">{{plant.description}}</div>
+  <div class="content">
+    <div class="title_img">
+      <div class="plant_title">{{plant.name}}</div>
+      <img class="plant_img_planthtml" ng-src="{{plant.img}}" alt="{{plant.name}}">
+    </div>
+    <div class="quicklook">
+      <h5 class="quick-look-title">Quick Facts</h5>
+      <ul>
+        <li><strong>Sun amount needed</strong>: {{plant.sun_amount}}</li>
+        <li><strong>Temperture Tolerance</strong>: {{plant.weather_tolerance}}</li>
+        <li><strong>Soil Germanation Temperture</strong>: {{plant.soil_germ_temp}}</li>
+        <li><strong>Life Cycle </strong>: {{plant.life_cycle}}</li>
+        <li><strong>Planting Depth</strong>: {{plant.planting_depth}}</li>
+        <li><strong>Row Spacing</strong>: {{plant.row_spacing}}</li>
+        <li><strong>Days to Germanation</strong>: {{plant.days_to_germ}}</li>
+        <li><strong>Soil PH Level</strong>: {{plant.soil_ph}}</li>
+        <li><strong>Growing Soil Temperture </strong>: {{plant.growing_soil_temp}}</li>
+        <li><strong>Time Till Harvest</strong>: {{plant.time_to_harvest}}</li>
+        <li><strong>Seed Longevity</strong>: {{plant.seed_longevity}}</li>
+        <li><strong>Pests</strong>: {{plant.pest}}</li>
+        <li><strong>Diseases</strong>: {{plant.diseases}}</li>
+      </ul>
+    </div>
+    <div class="plant_description">{{plant.description}}</div>
+  </div>
 </div>
