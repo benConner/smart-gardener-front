@@ -83,3 +83,61 @@ nav{
 .form_text::-webkit-input-placeholder{
   color:#66bb6a !important;
 }
+.delete{
+  color: white;
+  background-color: red;
+  border: none;
+  border-radius: 100%;
+  box-shadow: 0px 0px 1px 0px rgba(255,0,0,0.75);
+  max-width: 20px;
+  max-height: 20px;
+  float: right;
+  margin-right: 60%;
+}
+.plant_title{
+  font-size: 2rem;
+  padding-left: 5px;
+}
+
+
+.quicklook{
+  border: black solid 2px;
+  width: 55%;
+  float: right;
+  margin-top: 43px;
+  margin-right: 10px
+
+}
+.title_img{
+  width: 42%;
+  float: left;
+  margin-left: 10px;
+}
+
+.plant_img_planthtml{
+  height: auto;
+  width: 340px;
+}
+.plant_select{
+  max-width: 33%;
+  margin-left: 20px;
+}
+.create_btn{
+  margin-top: 30px;
+}
+.plant_description{
+  margin: 5px 10px;
+}
+li{
+  padding-bottom: 5px;
+  font-size: .8rem;
+}
+ul{
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+strong{
+  font-size: 1.2rem;
+  font-style: oblique;
+}
