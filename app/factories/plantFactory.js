@@ -20,6 +20,17 @@ angular.module('Smart_Gardener')
       .catch((res)=>{
           console.error(res);
       })
+    },
+    addPlantToGarden : (relation)=>{
+      console.log("called");
+      return $http
+      .post(`http://localhost:3000/api/v1/plants/garden`, relation)
+      .then((res)=>{
+          return res
+      })
+      .catch((res)=>{
+          console.error(res);
+      })
     }
   }
 })
