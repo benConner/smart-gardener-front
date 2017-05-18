@@ -1,16 +1,33 @@
 angular.module('Smart_Gardener')
 .controller('One_GardenCtrl', function($scope, $routeParams, gardenFactory, plantFactory) {
 
-  gardenFactory.getGardenById($routeParams.id)
-  .then((res)=>{
-    console.log($routeParams.id);
-    $scope.garden = res.data
-    // $scope.plants = res.data.plant
-    console.log($scope.garden);
-  })
-  plantFactory.getPlants()
-  .then((res) => {
+  (getGardenInfo = ()=>{
+    gardenFactory.getGardenById($routeParams.id)
+    .then((res)=>{
+      $scope.garden = res.data
+    })
+    plantFactory.getPlants()
+    .then((res) => {
 
-    $scope.plants = res.data
-  })
+      $scope.plants = res.data
+    })
+  })()
+
+  $scope.addPlant = (plantId)=>{
+    let num = $routeParams.id
+    let relation={}
+    relation.plant_id = plantId
+    relation.garden_id = parseInt($routeParams.id)
+    plantFactory.addPlantToGarden(relation)
+    .then((res)=>{
+      console.log(res);
+      getGardenInfo();
+    })
+  }
+  $scope.deletePlant = (plantId)=>{
+    gardenFactory.deletePlantFromGarden($routeParams.id, plantId)
+    .then((res)=>{
+      getGardenInfo();
+    })
+  }
 })
