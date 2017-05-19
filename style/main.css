@@ -143,6 +143,31 @@ nav{
   background-color: #66bb6a;
   color: white;
 }
+.garden_plant_list{
+  vertical-align: middle;
+  margin: 5px;
+  padding:5px;
+}
+.garden_plants_container{
+margin-top: 30px;
+
+}
+.delete_plant{
+  color: white;
+  background-color: red;
+  border: none;
+  border-radius: 100%;
+  box-shadow: 0px 0px 1px 0px rgba(255,0,0,0.75);
+  margin-top: 23px;
+}
+.plant_select{
+  max-width: 33%;
+  margin-left: 33%;
+}
+.plant_img_garden{
+  height: 75px;
+  width: 100px;
+}
 li{
   padding-bottom: 5px;
   font-size: .8rem;
