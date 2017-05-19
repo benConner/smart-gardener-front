@@ -1,5 +1,5 @@
 angular.module('Smart_Gardener')
-.controller('One_GardenCtrl', function($scope, $routeParams, gardenFactory, plantFactory) {
+.controller('One_GardenCtrl', function($scope, $routeParams, gardenFactory, plantFactory, $location) {
 
   (getGardenInfo = ()=>{
     gardenFactory.getGardenById($routeParams.id)
@@ -32,5 +32,8 @@ angular.module('Smart_Gardener')
     .then((res)=>{
       getGardenInfo();
     })
+  }
+  $scope.plantDetails = (id)=>{
+    $location.url(`/plant/${id}`)
   }
 })
