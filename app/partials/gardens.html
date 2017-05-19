@@ -16,10 +16,9 @@
     </div>
   </div>
   <div class="content">
-    <div class="plants" ng-repeat="garden in gardens">
-      <span ng-click="getGardenId(garden.id)">{{garden.name}}</span>
-      <input class="delete" type="button" ng-click="delete(garden.id)" value="X">
+    <div class="gardens_click" ng-repeat="garden in gardens">
+      <span class="center garden_name" ng-click="getGardenId(garden.id)">{{garden.name}}</span>
+      <input class="delete delete_garden" type="button" ng-click="delete(garden.id)" value="X">
     </div>
-
   </div>
 </div>

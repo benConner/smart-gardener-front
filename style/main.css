@@ -92,7 +92,9 @@ nav{
   max-width: 20px;
   max-height: 20px;
   float: right;
-  margin-right: 60%;
+}
+.delete_garden{
+  margin-right: 15%
 }
 .plant_title{
   font-size: 2rem;
@@ -127,6 +129,20 @@ nav{
 }
 .plant_description{
   margin: 5px 10px;
+}
+.gardens_click{
+  background-color: #486B00;
+  margin: 20px 35%;
+  box-shadow: 0 0 0 0 black;
+  padding: 10px;
+  color: #a2c523;
+}
+.garden_name{
+  padding-left: 30px
+}
+.gardens_click:hover{
+  background-color: #66bb6a;
+  color: white;
 }
 li{
   padding-bottom: 5px;
