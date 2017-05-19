@@ -17,8 +17,8 @@
     <div class="garden_plants_container col m6" ng-repeat="plant in garden.plant">
       <div class="garden_plant_list col">
         <img class="plant_img_garden col" ng-src="{{plant.img}}" alt="photo of {{name}}">
-        <h4 class="garden_plant_title col" ng-click="plantDetails(plant.id) center">{{plant.name}}</h4>
-        <input class="delete_plant " type="button" ng-click="deletePlant(plant.id)"value="X">
+        <h4 class="garden_plant_title col" ng-click="plantDetails(plant.id)">{{plant.name}}</h4>
+        <input class="delete_plant" type="button" ng-click="deletePlant(plant.id)"value="X">
       </div>
     </div>
   </div>
