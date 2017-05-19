@@ -11,12 +11,12 @@
   </nav>
   <div class="content">
     <h1 class="center">{{garden.name}}</h1>
+    <div class="plant_select">
+      <select  ng-change="addPlant(selectedPlant.id)" class="" ng-model="selectedPlant" ng-options="plant.name for plant in plants | orderBy:'name'"></select>
+    </div>
     <div ng-repeat="plant in garden.plant">
       <h3 class="">{{plant.name}}</h3>
       <input class="delete" type="button" ng-click="deletePlant(plant.id)"value="X">
-    </div>
-    <div class="plant_select">
-      <select  ng-change="addPlant(selectedPlant.id)" class="" ng-model="selectedPlant" ng-options="plant.name for plant in plants | orderBy:'name'"></select>
     </div>
   </div>
 </div>
