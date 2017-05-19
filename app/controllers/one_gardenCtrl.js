@@ -18,11 +18,14 @@ angular.module('Smart_Gardener')
     let relation={}
     relation.plant_id = plantId
     relation.garden_id = parseInt($routeParams.id)
-    plantFactory.addPlantToGarden(relation)
-    .then((res)=>{
-      console.log(res);
-      getGardenInfo();
-    })
+    if(plantId !== undefined){
+      plantFactory.addPlantToGarden(relation)
+      .then((res)=>{
+        console.log(plantId);
+        console.log(res);
+        getGardenInfo();
+      })
+    }
   }
   $scope.deletePlant = (plantId)=>{
     gardenFactory.deletePlantFromGarden($routeParams.id, plantId)
