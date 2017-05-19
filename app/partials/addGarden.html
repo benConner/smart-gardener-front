@@ -1,18 +1,18 @@
 <div class="container garden_form">
   <div class="row">
-    <form class="col s12">
+    <form class="col s12 awesome_garden" ng-submit="addGarden(gardenObj, [])">
       <div class="row">
         <div class="input-field col s12">
-          <input id="gardenName" type="text" class="validate form_text" ng-model="gardenObj.name" placeholder="Garden Name">
+          <input ng-required="true" maxlength="21" id="gardenName" type="text" class="validate form_text" ng-model="gardenObj.name" placeholder="Garden Name">
         </div>
         <div class="input-field col s12">
-          <input id="length" type="number" ng-model="gardenObj.length" class="validate form_text" placeholder="Length in feet">
+          <input ng-required="true" id="length" type="number" ng-model="gardenObj.length" class="validate form_text" placeholder="Length in feet">
         </div>
         <div class="input-field col s12">
-          <input type="number" ng-model="gardenObj.height" class="validate form_text" placeholder="Width in feet">
+          <input ng-required="true" type="number" ng-model="gardenObj.height" class="validate form_text" placeholder="Width in feet">
         </div>
         <div class="input-field col s12">
-          <button class="btn waves-effect waves-light green lighten-1" type="submit" name="action" ng-click="addGarden(gardenObj, [])">Add</button>
+          <input class="btn waves-effect waves-light green lighten-1" type="submit" name="action" value="Add">
           <a class="waves-effect waves-light btn green lighten-1" href="#/gardens">Back to Gardens</a>
         </div>
       </div>
