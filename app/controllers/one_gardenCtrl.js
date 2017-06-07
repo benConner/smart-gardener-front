@@ -1,6 +1,6 @@
 angular.module('Smart_Gardener')
 .controller('One_GardenCtrl', function($scope, $routeParams, gardenFactory, plantFactory, $location) {
-
+  //self executing function to load details of a garden and reload when changed
   (getGardenInfo = ()=>{
     gardenFactory.getGardenById($routeParams.id)
     .then((res)=>{
@@ -8,11 +8,11 @@ angular.module('Smart_Gardener')
     })
     plantFactory.getPlants()
     .then((res) => {
-
       $scope.plants = res.data
     })
   })()
 
+  //add plant to garden relationship by plant and garden id and checks if plant selected has an Id
   $scope.addPlant = (plantId)=>{
     let num = $routeParams.id
     let relation={}
@@ -27,12 +27,14 @@ angular.module('Smart_Gardener')
       })
     }
   }
+  //deletes plant relationship from garden
   $scope.deletePlant = (plantId)=>{
     gardenFactory.deletePlantFromGarden($routeParams.id, plantId)
     .then((res)=>{
       getGardenInfo();
     })
   }
+  //routes to plant information from garden page
   $scope.plantDetails = (id)=>{
     $location.url(`/plant/${id}`)
   }
